@@ -44,7 +44,6 @@ class _LoginState extends State<Login> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // const Text("E-mail", textAlign: TextAlign.start),
                     TextFormField(decoration: const InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32))), labelText: "E-mail")),
                     const SizedBox(height: 8),
                     TextFormField(decoration: const InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32))), labelText: "Senha"), obscureText: true),
