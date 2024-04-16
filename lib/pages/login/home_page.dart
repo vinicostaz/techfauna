@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
     return scaffoldLogin();
   }
 
-  Widget scaffoldLogin() { 
+  Widget scaffoldLogin() {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(170, 213, 118, 1),
       body: bodyLogin(),
@@ -35,7 +35,7 @@ class _LoginState extends State<Login> {
           child: Container(
             padding: const EdgeInsets.only(left: 32, right: 32, top: 48, bottom: 8),
             height: 400,
-            width: 400,
+            width: (400),
             decoration: BoxDecoration(border: Border.all(width: 1.0, color: Colors.black), borderRadius: BorderRadius.circular(12), color: Colors.grey[100]),
             child: Column(
               children: [
