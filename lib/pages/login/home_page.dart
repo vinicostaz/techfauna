@@ -1,9 +1,8 @@
-
-
 import 'package:flutter/material.dart';
+import 'cadastro.dart';
 
 class Login extends StatefulWidget {
-  const Login({super.key});
+  const Login({Key? key});
 
   @override
   State<Login> createState() => _LoginState();
@@ -33,10 +32,14 @@ class _LoginState extends State<Login> {
         ),
         Center(
           child: Container(
-            padding: const EdgeInsets.only(left: 32, right: 32, top: 48, bottom: 8),
+            padding:
+                const EdgeInsets.only(left: 32, right: 32, top: 48, bottom: 8),
             height: 400,
             width: (400),
-            decoration: BoxDecoration(border: Border.all(width: 1.0, color: Colors.black), borderRadius: BorderRadius.circular(12), color: Colors.grey[100]),
+            decoration: BoxDecoration(
+                border: Border.all(width: 1.0, color: Colors.black),
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.grey[100]),
             child: Column(
               children: [
                 const Text("Entrar", style: TextStyle(fontSize: 32)),
@@ -44,25 +47,47 @@ class _LoginState extends State<Login> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TextFormField(decoration: const InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32))), labelText: "E-mail")),
+                    TextFormField(
+                        decoration: const InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(32))),
+                            labelText: "E-mail")),
                     const SizedBox(height: 8),
-                    TextFormField(decoration: const InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32))), labelText: "Senha"), obscureText: true),
+                    TextFormField(
+                        decoration: const InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(32))),
+                            labelText: "Senha"),
+                        obscureText: true),
                     const SizedBox(height: 8),
-                    TextButton(onPressed: () {}, child: const Text("Esqueceu a senha?", style: TextStyle(color: Colors.blue))),
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text("Esqueceu a senha?",
+                            style: TextStyle(color: Colors.blue))),
                     const SizedBox(height: 8),
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(fixedSize:  const Size(double.maxFinite, 50), backgroundColor: Colors.black),
-                      onPressed: () {}, 
-                      child: const Text("Login", style: TextStyle(color: Colors.white))
-                    ),
+                        style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(double.maxFinite, 50),
+                            backgroundColor: Colors.black),
+                        onPressed: () {},
+                        child: const Text("Login",
+                            style: TextStyle(color: Colors.white))),
                     const SizedBox(height: 8),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text("Não tem uma conta? "),
-                        TextButton(onPressed: () {}, child: const Text("Cadastre-se", style: TextStyle(color: Colors.blue))),
-                      ]
-                    ),
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                      const Text("Não tem uma conta? "),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Cadastro()),
+                            );
+                          },
+                          child: const Text("Cadastre-se",
+                              style: TextStyle(color: Colors.blue))),
+                    ]),
                   ],
                 ),
               ],
